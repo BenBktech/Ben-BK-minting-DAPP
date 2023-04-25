@@ -1,6 +1,6 @@
 # Ben-BK-minting-DAPP
 
-![screenshot of the minting DApp]([https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/BenBktech/Ben-BK-minting-DAPP/blob/main/frontend/public/screenshot.png?raw=true))
+![screenshot of the minting DApp](https://raw.githubusercontent.com/BenBktech/Ben-BK-minting-DAPP/main/frontend/public/screenshot.png)
 
 Welcome to this GitHub repo that will allow you to easily launch your collection of NFTs (Smart Contract and Minting WebSite).
 
