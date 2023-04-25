@@ -9,7 +9,22 @@ Welcome to this GitHub repo that will allow you to easily launch your collection
 This DApp uses the Hardhat-deploy plugin.
 
 Rename ./backend/.env.example to ./backend/.env and place the correct information.
+
+```
+MAINNET_RPC_URL=//GET THIS ON ALCHEMY.com
+GOERLI_RPC_URL=//GET THIS ON ALCHEMY.com
+PRIVATE_KEY=//YOUR PRIVATE KEY
+ETHERSCAN_API_KEY=//GO ON ETHERSCAN.IO, CREATE AN ACCOUNT AND GET A FREE API KEY
+```
+
 Rename ./frontend/.env.example to ./frontend/.env and place the correct information.
+
+```
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x5FbDB2315678afecb367f032d93F642f64180aa3 //CHANGE THIS IF YOU DEPLOY ON GOERLI OR MAINNET
+NEXT_PUBLIC_SALESTARTTIME=//WHEN THE SALE STARTS (TIMESTAMP)
+NEXT_PUBLIC_MAXSUPPLY=//THE NUMBER OF NFTS IN THE COLLECTION
+NEXT_PUBLIC_PRICE='0.001' //THE PRICE OF 1 NFT
+```
 
 Launching the local Blockchain and deploying smarts contracts on the local Blockchain:
 
