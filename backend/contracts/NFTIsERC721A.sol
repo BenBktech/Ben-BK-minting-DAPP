@@ -15,7 +15,7 @@ contract NFT is ERC721A, Ownable {
     uint private constant MAX_SUPPLY = 10;
 
     //The price of one NFT
-    uint private constant PRICE = 0.1 ether;
+    uint private constant PRICE = 0.001 ether;
 
     //When the presale (dutch auction) starts
     uint public saleStartTime = 1681725607;

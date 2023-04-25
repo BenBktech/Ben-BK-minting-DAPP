@@ -11,11 +11,19 @@ function Layout({ children }) {
         direction="column"
         justifyContent="space-between"
         alignItems="center"
-        bgColor="#262626"
+        bgColor="#000"
         color="#fff"
     >
         <Header />
-        {children}
+        <Flex 
+          grow="1"
+          justifyContent="center"
+          alignItems="center"
+          w="100%"
+          h="100%"
+        >
+          {children}
+        </Flex>
         <Footer />
     </Flex>
   )

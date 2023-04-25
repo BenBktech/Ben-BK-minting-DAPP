@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Layout from '@/components/Layout/Layout'
+import Mint from '@/components/Mint/Mint'
 import { useState, useEffect } from 'react'
-import { useAccount, useProvider, useSigner } from 'wagmi'
+import { useAccount, useProvider } from 'wagmi'
 import { Text, useToast } from '@chakra-ui/react'
 import * as abiInfos from '../constants'
 import { ethers } from 'ethers'
@@ -11,21 +12,21 @@ export default function Home() {
 
   const { address, isConnected } = useAccount()
   const provider = useProvider()
-  const { data: signer } = useSigner()
-  const toast = useToast()
 
   const [saleStartTimeDateFormat, setSaleStartTimeDateFormat] = useState<string>("")
-  const [totaSupply, setTotalSupply] = useState<number | null>(null)
-
+  const [totalSupply, setTotalSupply] = useState<number | null>(null)
 
   useEffect(() => {
-    setSaleStartTimeDateFormat(calculateSaleStartDate())
-    getDatas()
-  }, [])
+    if(isConnected) {
+      setSaleStartTimeDateFormat(calculateSaleStartDate())
+      getDatas()
+    } 
+  }, [isConnected])
 
   const getDatas = async() => {
     const contract = new ethers.Contract(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS, abiInfos.abi, provider);
-    console.log(contract)
+    let totalSupply = await contract.totalSupply()
+    setTotalSupply(parseInt(totalSupply.toString()))
   }
 
   const calculateSaleStartDate = (): string => {
@@ -51,7 +52,7 @@ export default function Home() {
       <Layout>
         {isConnected ? (
           Math.floor(Date.now() / 1000) > parseInt(process.env.NEXT_PUBLIC_SALESTARTTIME) ? (
-            <Text>Commencé</Text>
+            <Mint getDatas={getDatas} totalSupply={totalSupply} />
           ) : (
             <Text>La vente commence le {saleStartTimeDateFormat}.</Text>
           )
