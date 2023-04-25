@@ -21,3 +21,14 @@ Déployer sur Goerli (La vérification du contrat est automatique) :
 Déployer sur le le Mainnet (La vérification du contrat est automatique) (à vos risques et périls, comprenez bien ce que vous faites ici, nous ne prendrons aucune responsabilité en cas de perte de vos Ethers) :
 
 ```yarn hardhat deploy --network mainnet```
+
+## Partie Site de Mint (./frontend)
+
+Lancer d'abord la Blockchain locale hardhat (dossier ./backend) :
+
+```yarn hardhat node```
+
+Puis dans un autre terminal, lancer la commande (dossier ./frontend) :
+
+```yarn dev```
+
