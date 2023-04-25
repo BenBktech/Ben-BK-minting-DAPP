@@ -8,6 +8,9 @@ Welcome to this GitHub repo that will allow you to easily launch your collection
 
 This DApp uses the Hardhat-deploy plugin.
 
+Rename ./backend/.env.example to ./backend/.env and place the correct information.
+Rename ./frontend/.env.example to ./frontend/.env and place the correct information.
+
 Launching the local Blockchain and deploying smarts contracts on the local Blockchain:
 
 ```yarn hardhat node```
