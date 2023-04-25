@@ -1,34 +1,36 @@
 # Ben-BK-minting-DAPP
 
-Bienvenue sur ce repo GitHub qui vous permettra très simplement de lancer votre collection de NFTs (Smart Contract et Site de Mint).
+Welcome to this GitHub repo that will allow you to easily launch your collection of NFTs (Smart Contract and Minting WebSite).
 
 ## Partie Smart Contract (./backend)
 
-Cette DApp utilise le plugin Hardhat-deploy.
+This DApp uses the Hardhat-deploy plugin.
 
-Lancer la Blockchain locale et déployer les smarts contracts sur la Blockchain locale :
+Launching the local Blockchain and deploying smarts contracts on the local Blockchain:
 
 ```yarn hardhat node```
 
-Lancer les tests et le coverage :
+Launch the tests and the coverage:
 
 ```yarn hardhat coverage```
 
-Déployer sur Goerli (La vérification du contrat est automatique) :
+Deploy on Goerli (Contract verification is automatic) :
 
 ```yarn hardhat deploy --network goerli```
 
-Déployer sur le le Mainnet (La vérification du contrat est automatique) (à vos risques et périls, comprenez bien ce que vous faites ici, nous ne prendrons aucune responsabilité en cas de perte de vos Ethers) :
+Deploy on the Mainnet (Contract verification is automatic) (at your own risk, understand what you are doing here, we will not take any responsibility in case of loss of your Ethers) :
 
 ```yarn hardhat deploy --network mainnet```
 
 ## Partie Site de Mint (./frontend)
 
-Lancer d'abord la Blockchain locale hardhat (dossier ./backend) :
+First launch the local blockchain hardhat (folder ./backend) :
 
 ```yarn hardhat node```
 
-Puis dans un autre terminal, lancer la commande (dossier ./frontend) :
+Then in another terminal, run the command (folder ./frontend) :
 
 ```yarn dev```
+
+Go on ```localhost:3000``` and enjoy.
 
